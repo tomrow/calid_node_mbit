@@ -11,10 +11,9 @@ enum RadioMessage {
 function printOut (text: string, ToDisplay: boolean, ToSerial: boolean) {
     if (ToDisplay) {
         basic.showString(text)
-    } else if (ToSerial) {
+    }
+    if (ToSerial) {
         serial.writeLine(text)
-    } else {
-    	
     }
 }
 radio.onReceivedValue(function (name, value) {
