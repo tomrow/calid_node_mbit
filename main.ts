@@ -76,7 +76,8 @@ while (Mode == 0) {
 loops.everyInterval(interval, function () {
     printOut(convertToText(control.deviceSerialNumber()), PrintDisplay, PrintSerial)
     if (Mode == 1) {
-    	
+        let index = 0
+        radio.sendValue("" + RegisteredIDs[index] + "temp", input.temperature())
     } else if (Mode == 2) {
     	
     } else {
